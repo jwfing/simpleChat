@@ -12,7 +12,10 @@ import android.widget.TextView;
  * Created by zhangxiaobo on 15/4/16.
  */
 public class ConversationActivity extends ActionBarActivity {
-  public static final String CONVERSATION_ID = "551a2847e4b04d688d73dc54";
+  // 这是使用中国节点时使用的 对话 id。如果不使用美国节点，请 uncomment 这一行。
+//  public static final String CONVERSATION_ID = "551a2847e4b04d688d73dc54";
+  // 这是使用美国节点时使用的 对话 id。如果不使用美国节点，请 comment 这一行。
+  public static final String CONVERSATION_ID =   "55489bd9e4b065597b2061d6";
   private static final String EXTRA_CLIENT_ID = "client_id";
 
   String clientId;

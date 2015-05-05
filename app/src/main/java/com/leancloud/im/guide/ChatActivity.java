@@ -56,6 +56,7 @@ public class ChatActivity extends ActionBarActivity {
       clientId = "me";
     }
     final String conversationId = getIntent().getStringExtra(EXTRA_CONVERSATION_ID);
+    Log.d(TAG, "会话 id: " + conversationId);
 
 
     // register callback
@@ -88,6 +89,9 @@ public class ChatActivity extends ActionBarActivity {
     sendButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        if (null == conversation) {
+            return;
+        }
         final AVIMTextMessage message = new AVIMTextMessage();
         message.setText(messageEditText.getText().toString());
         conversation.sendMessage(message, new AVIMConversationCallback() {
